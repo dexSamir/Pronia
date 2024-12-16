@@ -1,0 +1,78 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <None Remove="Models\" />
+    <None Remove="Models\Base\" />
+    <None Remove="Utilities\" />
+    <None Remove="Utilities\Extensions\" />
+    <None Remove="ViewModels\" />
+    <None Remove="DAL\" />
+    <None Remove="Utilities\Helpers\" />
+    <None Remove="Utilities\Helpers\Enums\" />
+    <None Remove="Views\" />
+    <None Remove="Controllers\" />
+    <None Remove="Views\Home\" />
+    <None Remove="Views\Shared\" />
+    <None Remove="Areas\" />
+    <None Remove="Areas\Admin\" />
+    <None Remove="Areas\Admin\Controllers\" />
+    <None Remove="Areas\Admin\Views\" />
+    <None Remove="Areas\Admin\Views\Slider\" />
+    <None Remove="Areas\Admin\Views\Dashboard\" />
+    <None Remove="Areas\Admin\Views\Shared\" />
+    <None Remove="ViewModels\Slider\" />
+    <None Remove="ViewModels\Common\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Models\Base\" />
+    <Folder Include="Utilities\" />
+    <Folder Include="Utilities\Extensions\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="DAL\" />
+    <Folder Include="Utilities\Helpers\" />
+    <Folder Include="Utilities\Helpers\Enums\" />
+    <Folder Include="Views\" />
+    <Folder Include="wwwroot\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Views\Home\" />
+    <Folder Include="Views\Shared\" />
+    <Folder Include="Areas\" />
+    <Folder Include="Areas\Admin\" />
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Admin\Views\" />
+    <Folder Include="wwwroot\admin\" />
+    <Folder Include="Areas\Admin\Views\Slider\" />
+    <Folder Include="Areas\Admin\Views\Dashboard\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="ViewModels\Slider\" />
+    <Folder Include="wwwroot\imgs\" />
+    <Folder Include="wwwroot\imgs\sliders\" />
+    <Folder Include="ViewModels\Common\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.11">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.11" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.11" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\" />
+    <Content Remove="wwwroot\admin\" />
+    <Content Remove="wwwroot\imgs\" />
+    <Content Remove="wwwroot\imgs\sliders\" />
+  </ItemGroup>
+</Project>

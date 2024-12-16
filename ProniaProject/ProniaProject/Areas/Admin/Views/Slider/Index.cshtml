@@ -1,0 +1,61 @@
+﻿@model List<Slider>
+@{
+    ViewData["Title"] = "Sliders";
+}
+<!-- Basic Bootstrap Table -->
+<div class="card" style="width:95%; margin: 0 auto; margin-top:3rem; ">
+    <h5 class="card-header">Table Basic</h5>
+    <div class="table-responsive text-nowrap">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Image</th>
+                    <th>Title</th>
+                    <th>Subtitle</th>
+                    <th>Offer</th>
+                    <th>Created Time</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                    <th>Show/Hide</th>
+                </tr>
+            </thead>
+            <tbody class="table-border-bottom-0">
+                @foreach (var item in Model)
+                    {
+                    <tr>
+                        @{
+                            int count = 0;
+                            count++;
+                        }
+                        <td><strong>@count</strong></td>
+                        <td><img src="~/imgs/sliders/@item.ImageUrl" width="50px"></td>
+                        <td>@item.Title</td>
+                        <td>@item.Subtitle</td>
+                        <td>@item.Offer</td>
+                        <td>@item.CreatedTime</td>
+                        <td scope="col">
+                            <a class="btn btn-primary" asp-action="Update" asp-controller="Slider" asp-route-id="@item.Id">
+                                <i class="fa-solid fa-pen"></i>
+                            </a>
+                        </td>
+                        <td scope="col">
+                            <a class="btn btn-danger" asp-action="Delete" asp-controller="Slider" asp-route-id="@item.Id">
+                                <i class="fa-solid fa-trash"></i>
+                            </a>
+                        </td>
+                        <td scope="col">
+                            <a class="btn @(item.IsDeleted? "btn-warning" : "btn-secondary")"
+                               asp-action="@(item.IsDeleted ? "Show" : "Hide")"
+                               asp-controller="Slider"
+                               asp-route-id="@item.Id">
+                                <i class="fa-solid @(item.IsDeleted ? "fa-eye" : "fa-eye-slash")"></i>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<!--/ Basic Bootstrap Table -->

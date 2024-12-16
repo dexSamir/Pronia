@@ -1,0 +1,44 @@
+﻿@model SliderCreateVM
+@{
+    ViewData["Title"] = "Create Slider";
+}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-xl">
+            <div class="card mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Create Slide</h5>
+                    <small class="text-muted float-end">Default label</small>
+                </div>
+                <div class="card-body">
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label class="form-label" asp-for="Title">Title</label>
+                            <input class="form-control" asp-for="Title" id="basic-default-fullname" />
+                            <span asp-validation-for="Title" class="text-small text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" asp-for="Subtitle">Subtitle</label>
+                            <input type="text" asp-for="Subtitle" class="form-control" id="basic-default-fullname"/>
+                            <span asp-validation-for="Subtitle" class="text-small text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Offer" class="form-label" >Offer</label>
+                            <input asp-for="Offer" type="text" class="form-control" id="basic-default-fullname"/>
+                            <span asp-validation-for="Offer" class="text-small text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="File" class="form-label">Slider Image</label>
+                            <div class="input-group">
+                                <input type="file" class="form-control" id="inputGroupFile02" asp-for="File" />
+                                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                            </div>
+                            <span asp-validation-for="File" class="text-small text-danger"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary" >Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
