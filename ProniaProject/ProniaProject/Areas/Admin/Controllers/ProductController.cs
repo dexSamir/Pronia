@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProniaProject.DAL;
+using ProniaProject.ViewModels.Products;
 
 namespace ProniaProject.Areas.Admin.Controllers
 {
@@ -21,10 +22,10 @@ namespace ProniaProject.Areas.Admin.Controllers
         {
             return View(); 
         }
-        //[HttpPost] 
-        //public async Task<IActionResult> Index()
-        //{
-
-        //}
+        [HttpPost]
+        public async Task<IActionResult> Create(ProductCreateVM vm)
+        {
+             
+        }
     }
 }
