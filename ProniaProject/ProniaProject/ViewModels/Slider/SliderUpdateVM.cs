@@ -10,7 +10,7 @@ namespace ProniaProject.ViewModels.Slider
 		[MaxLength(128, ErrorMessage = "Subtitle length must be less than 128 charachters"), Required(ErrorMessage = "Subtitle is Required")]
 		public string Subtitle { get; set; } = null!;
 		public string? Offer { get; set; }
-		public string ImageUrl { get; set; } = null!;
+		public string? ExistingImageUrl { get; set; } 
 		public IFormFile? File { get; set; }
 	}
 }

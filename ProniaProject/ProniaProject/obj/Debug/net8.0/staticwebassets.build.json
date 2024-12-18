@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "paz6UAZKhrZ79ejktCoNQaNDfivfWPtZHiTThP5Bwes=",
+  "Hash": "Hoy9N5xAl4cIqNR+anGfMz1ZDiI2wgPZPBKD6pKx/Dw=",
   "Source": "ProniaProject",
   "BasePath": "_content/ProniaProject",
   "Mode": "Default",
@@ -5565,6 +5565,25 @@
       "OriginalItemSpec": "wwwroot/assets/scss/style.scss"
     },
     {
+      "Identity": "/Users/samirhebibov/Desktop/Pronia/ProniaProject/ProniaProject/wwwroot/imgs/sliders/4eoxboh5.lr3.png",
+      "SourceId": "ProniaProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/samirhebibov/Desktop/Pronia/ProniaProject/ProniaProject/wwwroot/",
+      "BasePath": "_content/ProniaProject",
+      "RelativePath": "imgs/sliders/4eoxboh5.lr3.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/imgs/sliders/4eoxboh5.lr3.png"
+    },
+    {
       "Identity": "/Users/samirhebibov/Desktop/Pronia/ProniaProject/ProniaProject/wwwroot/imgs/sliders/e0sgzb1a.2re.png",
       "SourceId": "ProniaProject",
       "SourceType": "Discovered",
@@ -5601,25 +5620,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/imgs/sliders/examlwhh.3hs.png"
-    },
-    {
-      "Identity": "/Users/samirhebibov/Desktop/Pronia/ProniaProject/ProniaProject/wwwroot/imgs/sliders/mn01zxkg.r1t.png",
-      "SourceId": "ProniaProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/samirhebibov/Desktop/Pronia/ProniaProject/ProniaProject/wwwroot/",
-      "BasePath": "_content/ProniaProject",
-      "RelativePath": "imgs/sliders/mn01zxkg.r1t.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/imgs/sliders/mn01zxkg.r1t.png"
     },
     {
       "Identity": "/Users/samirhebibov/Desktop/Pronia/ProniaProject/ProniaProject/wwwroot/imgs/sliders/spv2kh2d.ycr.png",

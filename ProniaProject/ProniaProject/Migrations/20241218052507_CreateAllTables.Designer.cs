@@ -12,8 +12,8 @@ using ProniaProject.DAL;
 namespace ProniaProject.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241209162256_ColorTable")]
-    partial class ColorTable
+    [Migration("20241218052507_CreateAllTables")]
+    partial class CreateAllTables
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -293,6 +293,9 @@ namespace ProniaProject.Migrations
                     b.Property<int>("Discount")
                         .HasColumnType("integer");
 
+                    b.Property<int>("ESize")
+                        .HasColumnType("integer");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("boolean");
 
@@ -372,10 +375,10 @@ namespace ProniaProject.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("ProductId")
+                    b.Property<int?>("ProductId")
                         .HasColumnType("integer");
 
-                    b.Property<int>("TagId")
+                    b.Property<int?>("TagId")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
@@ -471,7 +474,7 @@ namespace ProniaProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Tag");
+                    b.ToTable("Tags");
                 });
 
             modelBuilder.Entity("ProniaProject.Models.User", b =>
@@ -678,15 +681,11 @@ namespace ProniaProject.Migrations
                 {
                     b.HasOne("ProniaProject.Models.Product", "Product")
                         .WithMany("Tags")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ProductId");
 
                     b.HasOne("ProniaProject.Models.Tag", "Tag")
                         .WithMany("Tags")
-                        .HasForeignKey("TagId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("TagId");
 
                     b.Navigation("Product");
 

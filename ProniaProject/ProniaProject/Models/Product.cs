@@ -16,11 +16,11 @@ namespace ProniaProject.Models
 		public string CoverImage { get; set; } = null!;
 		public int Discount { get; set; }
 		public ICollection<ProductImage> Images { get; set; } = new HashSet<ProductImage>();
-		public ICollection<Comment> Comments { get; set; } = new HashSet<Comment>();
+		public ICollection<Comment> Comments { get; set; } = null!; 
 		public ICollection<Rating> Ratings { get; set; } = new HashSet<Rating>();
 		public ICollection<ProductTag> Tags { get; set; } = new HashSet<ProductTag>();
 		public ICollection<ProductColor> Colors = new HashSet<ProductColor>();
-		public ESize ESize { get; set; }
+		public ICollection<ProductSize> Sizes = new HashSet<ProductSize>();
     }
 }
 

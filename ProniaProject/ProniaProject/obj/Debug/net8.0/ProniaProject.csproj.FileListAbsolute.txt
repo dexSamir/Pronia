@@ -232,6 +232,9 @@
 /Users/samirhebibov/Desktop/Pronia/ProniaProject/ProniaProject/obj/Debug/net8.0/ProniaProject.AssemblyInfo.cs
 /Users/samirhebibov/Desktop/Pronia/ProniaProject/ProniaProject/obj/Debug/net8.0/ProniaProject.csproj.CoreCompileInputs.cache
 /Users/samirhebibov/Desktop/Pronia/ProniaProject/ProniaProject/obj/Debug/net8.0/ProniaProject.MvcApplicationPartsAssemblyInfo.cache
+/Users/samirhebibov/Desktop/Pronia/ProniaProject/ProniaProject/obj/Debug/net8.0/ProniaProject.RazorAssemblyInfo.cache
+/Users/samirhebibov/Desktop/Pronia/ProniaProject/ProniaProject/obj/Debug/net8.0/ProniaProject.RazorAssemblyInfo.cs
+/Users/samirhebibov/Desktop/Pronia/ProniaProject/ProniaProject/obj/Debug/net8.0/ProniaProject.sourcelink.json
 /Users/samirhebibov/Desktop/Pronia/ProniaProject/ProniaProject/obj/Debug/net8.0/staticwebassets.build.json
 /Users/samirhebibov/Desktop/Pronia/ProniaProject/ProniaProject/obj/Debug/net8.0/staticwebassets.development.json
 /Users/samirhebibov/Desktop/Pronia/ProniaProject/ProniaProject/obj/Debug/net8.0/staticwebassets/msbuild.ProniaProject.Microsoft.AspNetCore.StaticWebAssets.props
@@ -246,5 +249,3 @@
 /Users/samirhebibov/Desktop/Pronia/ProniaProject/ProniaProject/obj/Debug/net8.0/ProniaProject.pdb
 /Users/samirhebibov/Desktop/Pronia/ProniaProject/ProniaProject/obj/Debug/net8.0/ProniaProject.genruntimeconfig.cache
 /Users/samirhebibov/Desktop/Pronia/ProniaProject/ProniaProject/obj/Debug/net8.0/ref/ProniaProject.dll
-/Users/samirhebibov/Desktop/Pronia/ProniaProject/ProniaProject/obj/Debug/net8.0/ProniaProject.RazorAssemblyInfo.cache
-/Users/samirhebibov/Desktop/Pronia/ProniaProject/ProniaProject/obj/Debug/net8.0/ProniaProject.RazorAssemblyInfo.cs

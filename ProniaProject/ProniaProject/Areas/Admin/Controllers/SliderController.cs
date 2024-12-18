@@ -84,7 +84,7 @@ namespace ProniaProject.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Show(int? id)
         {
-            return await ToggleSlideVisibility(id, true);
+            return await ToggleSlideVisibility(id, false);
         }
         public async Task<IActionResult> Hide (int? id)
         {
@@ -94,47 +94,47 @@ namespace ProniaProject.Areas.Admin.Controllers
         public async Task<IActionResult> Update(int? id)
         {
             if (!id.HasValue) return BadRequest();
-            var slider = _context.Sliders
-                .Where(x => id == x.Id)
+            var slider = await _context.Sliders
+                .Where(x => x.Id == id)
                 .Select(x => new SliderUpdateVM
                 {
                     Title = x.Title,
-                    ImageUrl = x.ImageUrl,
-                    Offer = x.Offer,
-                    Subtitle = x.Subtitle 
-                }).FirstOrDefault();
-            if (slider == null) return NotFound(); 
+                    Subtitle = x.Subtitle,
+                    ExistingImageUrl = x.ImageUrl,
+                    Offer = x.Offer
+                }).FirstOrDefaultAsync();
+            if (slider == null) return NotFound();
             return View(slider); 
         }
         [HttpPost]
-        public async Task<IActionResult> Index(int? id, SliderUpdateVM vm)
+        public async Task<IActionResult> Update(int? id, SliderUpdateVM vm)
         {
             if (!id.HasValue) return BadRequest();
             var data = await _context.Sliders.FindAsync(id);
             if (data == null) return NotFound();
+            if (!ModelState.IsValid) return View(vm); 
 
-            if (!ModelState.IsValid) return View(vm);
-
-            if(vm.File !=null)
+            if(vm.File != null)
             {
-                if(vm.File.isValidType("image"))
+                if (!vm.File.isValidType("image"))
                 {
-                    ModelState.AddModelError("File", "File type must be and image!");
+                    ModelState.AddModelError("File", "File type must be an image!");
                     return View(vm); 
                 }
-                if(vm.File.isValidSize(300))
+                if (!vm.File.isValidSize(300))
                 {
                     ModelState.AddModelError("File", "File size must be less than 300kb!");
                     return View(vm); 
                 }
-                string OldPath = Path.Combine(Directory.GetCurrentDirectory(), _env.WebRootPath, "imgs", "sliders", data.ImageUrl);
 
-                if (System.IO.File.Exists(OldPath))
-                    System.IO.File.Delete(OldPath);
+                string oldPath = Path.Combine(Directory.GetCurrentDirectory(), _env.WebRootPath, "imgs", "sliders", data.ImageUrl);
 
-                string newFileName = await vm.File.UploadAsync(_env.WebRootPath, "imgs", "sliders");
-                data.ImageUrl = newFileName;
-                
+                if (System.IO.File.Exists(oldPath))
+                    System.IO.File.Delete(oldPath);
+
+                string newPath = await vm.File.UploadAsync(_env.WebRootPath, "imgs", "sliders");
+                data.ImageUrl = newPath;
+
             }
 
             data.Title = vm.Title;
@@ -142,7 +142,6 @@ namespace ProniaProject.Areas.Admin.Controllers
             data.Offer = vm.Offer;
 
             await _context.SaveChangesAsync();
-
             return RedirectToAction(nameof(Index)); 
         }
     }

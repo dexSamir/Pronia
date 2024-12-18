@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Category Update"; 
+}
+@model CategoryUpdateVM
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-xl">
+            <div class="card mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Update Category</h5>
+                </div>
+                <div class="card-body">
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label class="form-label" asp-for="Name">Name</label>
+                            <input class="form-control" asp-for="Name" id="basic-default-fullname" />
+                            <span asp-validation-for="Name" class="text-small text-danger"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

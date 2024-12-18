@@ -8,11 +8,11 @@ namespace ProniaProject.Models
 		public int Id { get; set; }
 		public string Content { get; set; } = null!;
 
-		public int ProductId { get; set; }
-		public Product Product { get; set; } = null!;
+		public int? ProductId { get; set; }
+		public Product? Product { get; set; } 
 
-		public int UserId { get; set; }
-		public User User { get; set; } = null!;
+		public string? UserId { get; set; }
+		public User? User { get; set; } 
 		public bool IsEdited { get; set; }
 		public DateTime CreatedTime { get; set; } = DateTime.UtcNow;
 

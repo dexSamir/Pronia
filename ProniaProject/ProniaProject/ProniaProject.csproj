@@ -30,6 +30,12 @@
     <None Remove="Areas\Admin\Views\Shared\" />
     <None Remove="ViewModels\Slider\" />
     <None Remove="ViewModels\Common\" />
+    <None Remove="Areas\Admin\Views\Category\" />
+    <None Remove="ViewModels\Category\" />
+    <None Remove="Areas\Admin\Views\Tag\" />
+    <None Remove="ViewModels\Tag\" />
+    <None Remove="Areas\Admin\Views\Product\" />
+    <None Remove="ViewModels\Products\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -57,6 +63,12 @@
     <Folder Include="wwwroot\imgs\" />
     <Folder Include="wwwroot\imgs\sliders\" />
     <Folder Include="ViewModels\Common\" />
+    <Folder Include="Areas\Admin\Views\Category\" />
+    <Folder Include="ViewModels\Category\" />
+    <Folder Include="Areas\Admin\Views\Tag\" />
+    <Folder Include="ViewModels\Tag\" />
+    <Folder Include="Areas\Admin\Views\Product\" />
+    <Folder Include="ViewModels\Products\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.11">

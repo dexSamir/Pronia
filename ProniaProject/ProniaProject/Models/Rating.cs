@@ -9,11 +9,11 @@ namespace ProniaProject.Models
 		[Range(1,5)]
 		public int RatingCount { get; set; } 
 
-		public int ProductId { get; set; }
-		public Product Product { get; set; } = null!;
+		public int? ProductId { get; set; }
+		public Product? Product { get; set; } 
 
-		public int UserId { get; set; }
-		public User User { get; set; } = null!; 
+		public string? UserId { get; set; } 
+		public User? User { get; set; }  
 	}
 }
 
